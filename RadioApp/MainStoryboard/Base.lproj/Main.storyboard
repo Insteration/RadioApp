@@ -157,10 +157,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <sections>
-                            <tableViewSection id="5G8-Wf-QfL">
+                            <tableViewSection headerTitle="Main settings" id="5G8-Wf-QfL">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="XoR-qp-o08">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XoR-qp-o08" id="jiw-EA-tje">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
@@ -190,20 +190,28 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="aX1-ea-bW6">
-                                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Seconds Settings" id="i6e-1X-2Km">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="OyG-42-I0L">
+                                        <rect key="frame" x="0.0" y="100" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aX1-ea-bW6" id="S7u-Bg-CKq">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OyG-42-I0L" id="Uc7-Aw-WS9">
+                                            <rect key="frame" x="0.0" y="0.0" width="376" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="aPc-qQ-jvX">
-                                        <rect key="frame" x="0.0" y="88" width="414" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aPc-qQ-jvX" id="q7q-CI-vGv">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="More pidors on screen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J6V-bX-Dc6">
+                                                    <rect key="frame" x="20" y="12" width="317" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="J6V-bX-Dc6" firstAttribute="bottom" secondItem="Uc7-Aw-WS9" secondAttribute="bottomMargin" id="LW7-mg-lxy"/>
+                                                <constraint firstItem="J6V-bX-Dc6" firstAttribute="leading" secondItem="Uc7-Aw-WS9" secondAttribute="leadingMargin" id="j9l-gE-4GA"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
@@ -223,11 +231,34 @@
                     </navigationItem>
                     <connections>
                         <outlet property="firstSwitch" destination="tch-cG-I9E" id="EwN-cO-kIX"/>
+                        <outlet property="secondSettingsCell" destination="OyG-42-I0L" id="VcS-Bx-MvW"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jjP-Vv-Ed7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5917.3913043478269" y="-385.04464285714283"/>
+            <point key="canvasLocation" x="6000" y="-391"/>
+        </scene>
+        <!--More pidors on screen-->
+        <scene sceneID="aZg-Ob-QzX">
+            <objects>
+                <viewController storyboardIdentifier="settingssecondhomevc" id="pgb-4w-PpK" customClass="HomeSettingsSecondViewController" customModule="RadioApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dCI-gn-D4H">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="C3a-VX-aZi"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="More pidors on screen" id="vJz-aU-Pew">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="Ene-lg-LZl">
+                            <connections>
+                                <action selector="backToHomeSettingsVC:" destination="pgb-4w-PpK" id="M1Y-kg-V0U"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t2i-zN-Gfl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7786" y="-395"/>
         </scene>
         <!--Tab Bar View Controller-->
         <scene sceneID="z1R-5e-4Sf">
@@ -372,6 +403,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bxa-2U-8rb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4117.5" y="-1197.8873239436621"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="sx8-If-lxx">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="b0G-Qm-9KA" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="EGZ-vO-vX0">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="pgb-4w-PpK" kind="relationship" relationship="rootViewController" id="Nww-hQ-Lxm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OcD-QG-0w5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6825" y="-391"/>
         </scene>
     </scenes>
     <resources>

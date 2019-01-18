@@ -13,6 +13,7 @@ class HomeSettingsViewController: UITableViewController {
     var myModel: MyModel?
     
     @IBOutlet weak var firstSwitch: UISwitch!
+    @IBOutlet weak var secondSettingsCell: UITableViewCell!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,7 +21,8 @@ class HomeSettingsViewController: UITableViewController {
         if myModel?.firstSwitchOnHSVC == true {
             firstSwitch.isOn = true
         }
-
+        
+        
         //        print(myModel?.mydata)
         // Do any additional setup after loading the view.
     }
@@ -51,6 +53,19 @@ class HomeSettingsViewController: UITableViewController {
             myModel?.firstSwitchOnHSVC = true
         } else {
             myModel?.firstSwitchOnHSVC = false
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if secondSettingsCell.isSelected == true {
+            
+            let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let homeSettingsSecondViewController = storyboard.instantiateViewController(withIdentifier: "settingssecondhomevc") as! HomeSettingsSecondViewController
+            homeSettingsSecondViewController.myModel = myModel
+            let secondNC = UINavigationController(rootViewController: homeSettingsSecondViewController)
+//            let navigationController = UINavigationController(rootViewController: homeSettingsSecondViewController)
+            self.present(secondNC, animated: true, completion: nil)
+            
         }
     }
     /*
