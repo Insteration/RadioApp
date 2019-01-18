@@ -12,13 +12,25 @@ class HomeViewController: UIViewController {
     
     var myModel = MyModel()
     
+    @IBOutlet weak var labelSettings: UILabel!
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if myModel.firstSwitchOnHSVC == true {
+            self.labelSettings.text = myModel.pidorEnable
+        } else {
+            self.labelSettings.text = myModel.pidorDisable
+        }
+    }
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+
+
         
         // Do any additional setup after loading the view.
     }
-    
-    
+
     @IBAction func goToHomeSettingsViewController(_ sender: UIBarButtonItem) {
 
         let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
@@ -44,5 +56,13 @@ class HomeViewController: UIViewController {
 //     // Pass the selected object to the new view controller.
 //     }
 
+    @IBAction func printButton(_ sender: UIButton) {
+//        if myModel.firstSwitchOnHSVC == true {
+//            self.labelSettings.text = myModel.pidorEnable
+//        } else {
+//            self.labelSettings.text = myModel.pidorDisable
+//        }
+        print("State switch is \(myModel.firstSwitchOnHSVC)")
+    }
     
 }
