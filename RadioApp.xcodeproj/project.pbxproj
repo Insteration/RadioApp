@@ -7,14 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D996315A21F1EED6008B4AEE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D996315921F1EED6008B4AEE /* HomeViewController.swift */; };
+		D996315C21F1EFEB008B4AEE /* RadioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D996315B21F1EFEB008B4AEE /* RadioViewController.swift */; };
+		D996316021F1FF2F008B4AEE /* HomeSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D996315F21F1FF2F008B4AEE /* HomeSettingsViewController.swift */; };
+		D996316221F1FF67008B4AEE /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D996316121F1FF67008B4AEE /* HomeModel.swift */; };
+		D996316721F21AB3008B4AEE /* HomeCreativeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D996316621F21AB3008B4AEE /* HomeCreativeViewController.swift */; };
 		D99AE64921F1D3A100D933B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99AE64821F1D3A100D933B5 /* AppDelegate.swift */; };
 		D99AE64B21F1D3A100D933B5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99AE64A21F1D3A100D933B5 /* ViewController.swift */; };
 		D99AE64E21F1D3A100D933B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D99AE64C21F1D3A100D933B5 /* Main.storyboard */; };
 		D99AE65021F1D3A300D933B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D99AE64F21F1D3A300D933B5 /* Assets.xcassets */; };
 		D99AE65321F1D3A300D933B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D99AE65121F1D3A300D933B5 /* LaunchScreen.storyboard */; };
+		D99AE65B21F1D94700D933B5 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99AE65A21F1D94700D933B5 /* TabBarViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D996315921F1EED6008B4AEE /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		D996315B21F1EFEB008B4AEE /* RadioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioViewController.swift; sourceTree = "<group>"; };
+		D996315F21F1FF2F008B4AEE /* HomeSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSettingsViewController.swift; sourceTree = "<group>"; };
+		D996316121F1FF67008B4AEE /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
+		D996316621F21AB3008B4AEE /* HomeCreativeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCreativeViewController.swift; sourceTree = "<group>"; };
 		D99AE64521F1D3A100D933B5 /* RadioApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RadioApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D99AE64821F1D3A100D933B5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D99AE64A21F1D3A100D933B5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +33,7 @@
 		D99AE64F21F1D3A300D933B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D99AE65221F1D3A300D933B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D99AE65421F1D3A300D933B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D99AE65A21F1D94700D933B5 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +47,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D996316421F1FF7F008B4AEE /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				D996315921F1EED6008B4AEE /* HomeViewController.swift */,
+				D996316121F1FF67008B4AEE /* HomeModel.swift */,
+				D996315F21F1FF2F008B4AEE /* HomeSettingsViewController.swift */,
+				D996316621F21AB3008B4AEE /* HomeCreativeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		D996316521F1FFC0008B4AEE /* MainStoryboard */ = {
+			isa = PBXGroup;
+			children = (
+				D99AE64C21F1D3A100D933B5 /* Main.storyboard */,
+			);
+			path = MainStoryboard;
+			sourceTree = "<group>";
+		};
 		D99AE63C21F1D3A100D933B5 = {
 			isa = PBXGroup;
 			children = (
@@ -56,7 +87,10 @@
 			children = (
 				D99AE64821F1D3A100D933B5 /* AppDelegate.swift */,
 				D99AE64A21F1D3A100D933B5 /* ViewController.swift */,
-				D99AE64C21F1D3A100D933B5 /* Main.storyboard */,
+				D996316521F1FFC0008B4AEE /* MainStoryboard */,
+				D996315B21F1EFEB008B4AEE /* RadioViewController.swift */,
+				D996316421F1FF7F008B4AEE /* Home */,
+				D99AE65A21F1D94700D933B5 /* TabBarViewController.swift */,
 				D99AE64F21F1D3A300D933B5 /* Assets.xcassets */,
 				D99AE65121F1D3A300D933B5 /* LaunchScreen.storyboard */,
 				D99AE65421F1D3A300D933B5 /* Info.plist */,
@@ -136,7 +170,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				D99AE64B21F1D3A100D933B5 /* ViewController.swift in Sources */,
+				D996315C21F1EFEB008B4AEE /* RadioViewController.swift in Sources */,
+				D996316021F1FF2F008B4AEE /* HomeSettingsViewController.swift in Sources */,
+				D996316221F1FF67008B4AEE /* HomeModel.swift in Sources */,
+				D996316721F21AB3008B4AEE /* HomeCreativeViewController.swift in Sources */,
+				D99AE65B21F1D94700D933B5 /* TabBarViewController.swift in Sources */,
 				D99AE64921F1D3A100D933B5 /* AppDelegate.swift in Sources */,
+				D996315A21F1EED6008B4AEE /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

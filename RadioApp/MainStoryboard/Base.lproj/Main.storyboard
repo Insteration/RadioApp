@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RadioApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bWG-hO-LhB">
+                                <rect key="frame" x="164" y="318" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="nxs-wS-btG" kind="show" id="LY0-jU-HX5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-134" y="43"/>
+        </scene>
+        <!--Radio-->
+        <scene sceneID="IXc-tL-G6J">
+            <objects>
+                <viewController id="f13-4G-jGP" customClass="RadioViewController" customModule="RadioApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="H7Q-CT-4Vk">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9r7-Bw-0sP">
+                                <rect key="frame" x="16" y="78" width="288" height="308"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0H3-Ye-qw7">
+                                <rect key="frame" x="84" y="445" width="32" height="30"/>
+                                <state key="normal" title="Stop"/>
+                                <connections>
+                                    <action selector="stopButton:" destination="f13-4G-jGP" eventType="touchUpInside" id="qaq-tp-5cG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Ek-ES-fkf">
+                                <rect key="frame" x="207" y="445" width="30" height="30"/>
+                                <state key="normal" title="Play"/>
+                                <connections>
+                                    <action selector="playButton:" destination="f13-4G-jGP" eventType="touchUpInside" id="dWI-bR-JP9"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="4Ek-ES-fkf" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="0H3-Ye-qw7" secondAttribute="trailing" constant="8" symbolic="YES" id="Dul-gL-aeD"/>
+                            <constraint firstItem="wVI-Z1-Irg" firstAttribute="trailing" secondItem="4Ek-ES-fkf" secondAttribute="trailing" constant="83" id="E25-X3-fyv"/>
+                            <constraint firstItem="9r7-Bw-0sP" firstAttribute="top" secondItem="wVI-Z1-Irg" secondAttribute="top" constant="14" id="EJM-Zv-tOp"/>
+                            <constraint firstItem="4Ek-ES-fkf" firstAttribute="top" secondItem="9r7-Bw-0sP" secondAttribute="bottom" constant="59" id="EW1-cv-JGB"/>
+                            <constraint firstItem="0H3-Ye-qw7" firstAttribute="baseline" secondItem="4Ek-ES-fkf" secondAttribute="baseline" id="Ivs-wH-hH6"/>
+                            <constraint firstItem="9r7-Bw-0sP" firstAttribute="leading" secondItem="H7Q-CT-4Vk" secondAttribute="leadingMargin" id="RLX-60-Ouq"/>
+                            <constraint firstItem="9r7-Bw-0sP" firstAttribute="trailing" secondItem="H7Q-CT-4Vk" secondAttribute="trailingMargin" id="cka-xw-DUe"/>
+                            <constraint firstItem="0H3-Ye-qw7" firstAttribute="leading" secondItem="wVI-Z1-Irg" secondAttribute="leading" constant="84" id="gHi-Kh-kRT"/>
+                            <constraint firstItem="wVI-Z1-Irg" firstAttribute="bottom" secondItem="9r7-Bw-0sP" secondAttribute="bottom" constant="133" id="jLP-0Q-ebB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wVI-Z1-Irg"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Radio" id="VGj-eg-uku"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jvt-TT-QYF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4367.1999999999998" y="355.7721139430285"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="JHD-lT-T2d">
+            <objects>
+                <viewController id="sdO-gO-JUc" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gYx-GX-dJL">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="8sB-At-ACi"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Settings" id="ZtP-PF-92I"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YPo-TE-opT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2480.8000000000002" y="-1075.4122938530736"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="mcG-WV-pa4">
+            <objects>
+                <viewController storyboardIdentifier="homevc" id="Fgu-5T-O2R" customClass="HomeViewController" customModule="RadioApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="c4Y-L6-CLh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="JRn-6c-b93">
+                                <rect key="frame" x="16" y="64" width="288" height="455"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MuY-Es-Dz1">
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="455"/>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="JRn-6c-b93" firstAttribute="bottom" secondItem="WBC-hZ-4t9" secondAttribute="bottom" id="Giy-ZK-ldy"/>
+                            <constraint firstItem="JRn-6c-b93" firstAttribute="trailing" secondItem="c4Y-L6-CLh" secondAttribute="trailingMargin" id="MKP-w0-lMv"/>
+                            <constraint firstItem="JRn-6c-b93" firstAttribute="top" secondItem="WBC-hZ-4t9" secondAttribute="top" id="btf-Ie-Ya2"/>
+                            <constraint firstItem="JRn-6c-b93" firstAttribute="leading" secondItem="c4Y-L6-CLh" secondAttribute="leadingMargin" id="gfO-MO-hHs"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="WBC-hZ-4t9"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Home" id="ogc-lw-4xa">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="creative-idea" id="N7N-ON-s8f">
+                            <connections>
+                                <action selector="goToHomeCreativeContoller:" destination="Fgu-5T-O2R" id="lcI-0v-u6S"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="controls" id="5Ul-Th-bl9">
+                            <connections>
+                                <action selector="goToHomeSettingsViewController:" destination="Fgu-5T-O2R" id="jNF-Lz-Oc0"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="unz-MG-Ox1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4119" y="-395"/>
+        </scene>
+        <!--Home Settings-->
+        <scene sceneID="mKp-0W-Flf">
+            <objects>
+                <viewController storyboardIdentifier="settingshomevc" id="2u5-aV-Aiz" customClass="HomeSettingsViewController" customModule="RadioApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kXY-sT-VHs">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Sss-qr-6R5"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Home Settings" id="cCM-qL-Ur8">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="l4w-7h-v2s">
+                            <connections>
+                                <action selector="goToHomeViewController:" destination="2u5-aV-Aiz" id="jGr-9P-bYz"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TTy-5L-umh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5918" y="-395"/>
+        </scene>
+        <!--Tab Bar View Controller-->
+        <scene sceneID="z1R-5e-4Sf">
+            <objects>
+                <tabBarController storyboardIdentifier="tabBarVC" id="nxs-wS-btG" customClass="TabBarViewController" customModule="RadioApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" id="If1-Aa-l1O">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="jf5-4N-08k" kind="relationship" relationship="viewControllers" id="LaG-gD-KUU"/>
+                        <segue destination="YuX-uk-4Ng" kind="relationship" relationship="viewControllers" id="LFB-wk-642"/>
+                        <segue destination="V7u-fT-LAk" kind="relationship" relationship="viewControllers" id="9to-8s-Tpe"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7A5-KB-tbd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="913" y="43"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="vTY-e4-yXl">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jf5-4N-08k" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" image="home" id="CUg-N1-4vb"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="FHQ-ht-QZN">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Fgu-5T-O2R" kind="relationship" relationship="rootViewController" id="SUl-Wd-F5h"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sf6-Ca-1Nq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2488.8000000000002" y="-336.88155922038982"/>
+        </scene>
+        <!--Radio-->
+        <scene sceneID="85e-Zh-8px">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="YuX-uk-4Ng" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Radio" image="radio" id="TN6-1v-gHt"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ngw-n4-YKw">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="f13-4G-jGP" kind="relationship" relationship="rootViewController" id="bNf-hE-lcj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e1o-GT-7OH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3428" y="355.7721139430285"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="Yxj-8C-LjW">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="V7u-fT-LAk" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Settings" image="settings" id="UXz-QK-RSk"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="uQQ-mo-Da8">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="sdO-gO-JUc" kind="relationship" relationship="rootViewController" id="L3I-fv-6RV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bJg-IM-Thx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1541.5999999999999" y="-1075.4122938530736"/>
+        </scene>
+        <!--Creative-->
+        <scene sceneID="fd6-Z4-LMn">
+            <objects>
+                <viewController storyboardIdentifier="homeCreativeVC" id="Vfi-ge-OHC" customClass="HomeCreativeViewController" customModule="RadioApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Bie-oi-diU">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="WBc-7M-vzB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Creative" id="AQD-7p-tq4">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="igU-jj-OiH">
+                            <connections>
+                                <action selector="goToHomeViewController:" destination="Vfi-ge-OHC" id="bn6-DH-csa"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BZL-gv-vIT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5115" y="-1197.8873239436621"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="XYd-mx-G1i">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UCf-dR-jg5" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="WeC-yu-7In">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="2u5-aV-Aiz" kind="relationship" relationship="rootViewController" id="LCR-mP-fLJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V4F-R9-PWQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5034" y="-395"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="kUy-SK-4Fa">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jBP-kR-TFc" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="n1d-a9-vaa">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Vfi-ge-OHC" kind="relationship" relationship="rootViewController" id="GDM-NH-lLM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bxa-2U-8rb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4117.5" y="-1197.8873239436621"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="controls" width="18" height="18"/>
+        <image name="creative-idea" width="18" height="18"/>
+        <image name="home" width="24" height="24"/>
+        <image name="radio" width="24" height="24"/>
+        <image name="settings" width="24" height="24"/>
+    </resources>
+</document>
