@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RadioApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="RadioApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -47,9 +47,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9r7-Bw-0sP">
-                                <rect key="frame" x="20" y="102" width="374" height="578"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0H3-Ye-qw7">
                                 <rect key="frame" x="94" y="730" width="86" height="48"/>
                                 <state key="normal" title="Stop" image="stop"/>
@@ -67,15 +64,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="0H3-Ye-qw7" firstAttribute="top" secondItem="9r7-Bw-0sP" secondAttribute="bottom" constant="50" id="23K-rz-ML5"/>
-                            <constraint firstItem="9r7-Bw-0sP" firstAttribute="top" secondItem="wVI-Z1-Irg" secondAttribute="top" constant="14" id="EJM-Zv-tOp"/>
-                            <constraint firstItem="4Ek-ES-fkf" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="0H3-Ye-qw7" secondAttribute="trailing" constant="8" symbolic="YES" id="KM9-6q-F7O"/>
-                            <constraint firstItem="9r7-Bw-0sP" firstAttribute="leading" secondItem="H7Q-CT-4Vk" secondAttribute="leadingMargin" id="RLX-60-Ouq"/>
-                            <constraint firstItem="9r7-Bw-0sP" firstAttribute="trailing" secondItem="H7Q-CT-4Vk" secondAttribute="trailingMargin" id="cka-xw-DUe"/>
-                            <constraint firstItem="wVI-Z1-Irg" firstAttribute="bottom" secondItem="9r7-Bw-0sP" secondAttribute="bottom" constant="133" id="jLP-0Q-ebB"/>
-                            <constraint firstItem="0H3-Ye-qw7" firstAttribute="leading" secondItem="wVI-Z1-Irg" secondAttribute="leading" constant="94" id="nlW-y5-5VC"/>
+                            <constraint firstItem="4Ek-ES-fkf" firstAttribute="leading" secondItem="0H3-Ye-qw7" secondAttribute="trailing" constant="73" id="3dZ-nd-9nk"/>
+                            <constraint firstItem="4Ek-ES-fkf" firstAttribute="top" secondItem="wVI-Z1-Irg" secondAttribute="top" constant="642" id="XfA-hy-PvD"/>
+                            <constraint firstItem="4Ek-ES-fkf" firstAttribute="baseline" secondItem="0H3-Ye-qw7" secondAttribute="baseline" id="kYP-T6-SiJ"/>
                             <constraint firstItem="wVI-Z1-Irg" firstAttribute="trailing" secondItem="4Ek-ES-fkf" secondAttribute="trailing" constant="79" id="qKw-Gv-cC8"/>
-                            <constraint firstItem="4Ek-ES-fkf" firstAttribute="baseline" secondItem="0H3-Ye-qw7" secondAttribute="baseline" id="tQQ-iD-AEl"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="wVI-Z1-Irg"/>
                     </view>
@@ -83,7 +75,99 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jvt-TT-QYF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4118.840579710145" y="551.11607142857144"/>
+            <point key="canvasLocation" x="4922" y="552"/>
+        </scene>
+        <!--Radio List Table View Controller-->
+        <scene sceneID="4Hs-u7-Wy5">
+            <objects>
+                <tableViewController id="gjb-2l-AOR" customClass="RadioListTableViewController" customModule="RadioApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="BIF-8C-wcr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <sections>
+                            <tableViewSection headerTitle="Ukraine Radiostations" id="oBx-HP-PyC">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="EYw-WB-Sh5">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="EYw-WB-Sh5" id="L7H-Q4-fVT">
+                                            <rect key="frame" x="0.0" y="0.0" width="376" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Radio Informator" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zdX-lX-btT">
+                                                    <rect key="frame" x="20" y="11" width="348" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="f13-4G-jGP" kind="show" id="T8R-8x-i3k"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="AhU-yT-cLh">
+                                        <rect key="frame" x="0.0" y="72" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="AhU-yT-cLh" id="cE8-fw-pJh">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="BIs-Cd-toZ">
+                                        <rect key="frame" x="0.0" y="116" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BIs-Cd-toZ" id="uQF-Kg-dR9">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Other Radiostations" id="izq-sl-PBf">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="HVr-5V-gQg">
+                                        <rect key="frame" x="0.0" y="188" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HVr-5V-gQg" id="KlW-pQ-2A2">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Sk1-xl-JJf">
+                                        <rect key="frame" x="0.0" y="232" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Sk1-xl-JJf" id="yLJ-g9-S9x">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="8b0-8i-TdU">
+                                        <rect key="frame" x="0.0" y="276" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8b0-8i-TdU" id="zCn-oO-aYP">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="gjb-2l-AOR" id="qAW-AF-qmc"/>
+                            <outlet property="delegate" destination="gjb-2l-AOR" id="q5x-p6-SSm"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="3xv-5D-Bu6"/>
+                    <connections>
+                        <outlet property="radioInformatorCell" destination="EYw-WB-Sh5" id="d4u-L9-2k4"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BhQ-0U-iPB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4118.840579710145" y="551.78571428571422"/>
         </scene>
         <!--Settings-->
         <scene sceneID="JHD-lT-T2d">
@@ -311,7 +395,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="f13-4G-jGP" kind="relationship" relationship="rootViewController" id="bNf-hE-lcj"/>
+                        <segue destination="gjb-2l-AOR" kind="relationship" relationship="rootViewController" id="wDS-L4-NAE"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e1o-GT-7OH" userLabel="First Responder" sceneMemberID="firstResponder"/>
