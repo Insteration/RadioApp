@@ -9,6 +9,11 @@
 import UIKit
 
 class RadioListTableViewController: UITableViewController {
+    
+    let radio = Radio()
+    let cellReuseIdentifier = "cell"
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,17 +27,54 @@ class RadioListTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
+    @IBOutlet weak var ukraineRadioList: UITableViewCell!
+    
     @IBOutlet weak var radioInformatorCell: UITableViewCell!
     
-//    override func numberOfSections(in tableView: UITableView) -> Int {
-//        // #warning Incomplete implementation, return the number of sections
-//        return 0
-//    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        print("selected cell \(indexPath.row)")
+    }
+    
+//    func goToRadioPlayer(_ sender: UITableViewCell) {
 //
-//    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        // #warning Incomplete implementation, return the number of rows
-//        return 0
+//        let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+//        let radioViewController = storyboard.instantiateViewController(withIdentifier: "radioVC") as! HomeSettingsViewController
+////        homeSettingsViewController.myModel = myModel
+////        let navigationController = UINavigationController(rootViewController: homeSettingsViewController)
+//        self.present(radioViewController, animated: true, completion: nil)
+////
 //    }
+    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        let radioList = [ukraineRadioList]
+//        
+//        switch radioList {
+//        case [0]:
+//            let segueDestination = segue.destination as! RadioViewController
+//        default:
+//            ()
+//        }
+
+    
+    
+    override func numberOfSections(in tableView: UI
+        TableView) -> Int {
+        // #warning Incomplete implementation, return the number of sections
+        return 1
+    }
+//
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // #warning Incomplete implementation, return the number of rows
+        return radio.ukraineRadio.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell: UITableViewCell = self.tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier)!
+        cell.textLabel!.text = self.radio.ukraineRadio[indexPath.row]
+        
+        return cell
+    }
 
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

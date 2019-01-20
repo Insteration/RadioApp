@@ -12,6 +12,8 @@ import AVFoundation
 
 class RadioViewController: UIViewController {
     
+//    let radio = Radio()
+    
     
     let informatorFM = AVPlayer(url: URL(string: "http://media.fregat.com:8000/RadioMIX.m3u")!)
     let kissFM = AVPlayer(url: URL(string: "https://www.kissfm.ua/KissFM.m3u")!)
