@@ -13,14 +13,19 @@ class RadioListTableViewController: UITableViewController {
     let radio = Radio()
     let cellReuseIdentifier = "cell"
     
-    
+    func teleportToRadioPlayer() {
+        let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let radioPlayerViewController = storyboard.instantiateViewController(withIdentifier: "radioPlayerViewController") as! RadioPlayerViewController
+        let radioPlayerNavController = UINavigationController(rootViewController: radioPlayerViewController)
+        present(radioPlayerNavController, animated: true, completion: nil)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         
         self.radioList.register(UITableViewCell.self, forCellReuseIdentifier: cellReuseIdentifier)
-
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
         
@@ -33,7 +38,7 @@ class RadioListTableViewController: UITableViewController {
     
     
     @IBOutlet var radioList: UITableView!
- 
+    
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
@@ -41,27 +46,20 @@ class RadioListTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell:UITableViewCell = self.tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier) as! UITableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier, for: indexPath)
         
-        // set the text from the data model
         cell.textLabel?.text = self.radio.ukraineRadio[indexPath.row]
+        cell.accessoryType = .disclosureIndicator
         
         return cell
     }
     
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        teleportToRadioPlayer()
         print("You tapped cell number \(indexPath.row).")
     }
-    
-    /*
-     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-     let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-     
-     // Configure the cell...
-     
-     return cell
-     }
-     */
     
     /*
      // Override to support conditional editing of the table view.

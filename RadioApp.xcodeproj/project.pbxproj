@@ -10,7 +10,7 @@
 		D93AD56721F31B5000EDAB54 /* RadioListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93AD56621F31B5000EDAB54 /* RadioListTableViewController.swift */; };
 		D93AD56921F31D2E00EDAB54 /* RadioModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93AD56821F31D2E00EDAB54 /* RadioModel.swift */; };
 		D996315A21F1EED6008B4AEE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D996315921F1EED6008B4AEE /* HomeViewController.swift */; };
-		D996315C21F1EFEB008B4AEE /* RadioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D996315B21F1EFEB008B4AEE /* RadioViewController.swift */; };
+		D996315C21F1EFEB008B4AEE /* RadioPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D996315B21F1EFEB008B4AEE /* RadioPlayerViewController.swift */; };
 		D996316021F1FF2F008B4AEE /* HomeSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D996315F21F1FF2F008B4AEE /* HomeSettingsViewController.swift */; };
 		D996316221F1FF67008B4AEE /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D996316121F1FF67008B4AEE /* HomeModel.swift */; };
 		D996316721F21AB3008B4AEE /* HomeCreativeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D996316621F21AB3008B4AEE /* HomeCreativeViewController.swift */; };
@@ -27,7 +27,7 @@
 		D93AD56621F31B5000EDAB54 /* RadioListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioListTableViewController.swift; sourceTree = "<group>"; };
 		D93AD56821F31D2E00EDAB54 /* RadioModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioModel.swift; sourceTree = "<group>"; };
 		D996315921F1EED6008B4AEE /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		D996315B21F1EFEB008B4AEE /* RadioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioViewController.swift; sourceTree = "<group>"; };
+		D996315B21F1EFEB008B4AEE /* RadioPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioPlayerViewController.swift; sourceTree = "<group>"; };
 		D996315F21F1FF2F008B4AEE /* HomeSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSettingsViewController.swift; sourceTree = "<group>"; };
 		D996316121F1FF67008B4AEE /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 		D996316621F21AB3008B4AEE /* HomeCreativeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCreativeViewController.swift; sourceTree = "<group>"; };
@@ -65,7 +65,7 @@
 		D93AD56521F31B1A00EDAB54 /* Radio */ = {
 			isa = PBXGroup;
 			children = (
-				D996315B21F1EFEB008B4AEE /* RadioViewController.swift */,
+				D996315B21F1EFEB008B4AEE /* RadioPlayerViewController.swift */,
 				D93AD56621F31B5000EDAB54 /* RadioListTableViewController.swift */,
 				D93AD56821F31D2E00EDAB54 /* RadioModel.swift */,
 			);
@@ -200,7 +200,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D99AE64B21F1D3A100D933B5 /* LoginViewController.swift in Sources */,
-				D996315C21F1EFEB008B4AEE /* RadioViewController.swift in Sources */,
+				D996315C21F1EFEB008B4AEE /* RadioPlayerViewController.swift in Sources */,
 				D93AD56921F31D2E00EDAB54 /* RadioModel.swift in Sources */,
 				D996316021F1FF2F008B4AEE /* HomeSettingsViewController.swift in Sources */,
 				D996316221F1FF67008B4AEE /* HomeModel.swift in Sources */,

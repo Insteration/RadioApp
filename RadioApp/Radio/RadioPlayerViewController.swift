@@ -10,7 +10,7 @@ import UIKit
 import AVKit
 import AVFoundation
 
-class RadioViewController: UIViewController {
+class RadioPlayerViewController: UIViewController {
     
 //    let radio = Radio()
     
@@ -31,7 +31,10 @@ class RadioViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func backToRadioList(_ sender: UIBarButtonItem) {
+        dismiss(animated: true, completion: nil)
+    }
+    
     @IBAction func playButton(_ sender: UIButton) {
         informatorFM.play()
         

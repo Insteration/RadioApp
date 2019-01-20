@@ -39,10 +39,10 @@
             </objects>
             <point key="canvasLocation" x="-134.78260869565219" y="42.857142857142854"/>
         </scene>
-        <!--Radio-->
+        <!--Radio Player-->
         <scene sceneID="IXc-tL-G6J">
             <objects>
-                <viewController storyboardIdentifier="radioVC" id="f13-4G-jGP" customClass="RadioViewController" customModule="RadioApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="radioPlayerViewController" id="f13-4G-jGP" customClass="RadioPlayerViewController" customModule="RadioApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="H7Q-CT-4Vk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -78,11 +78,17 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="wVI-Z1-Irg"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Radio" id="VGj-eg-uku"/>
+                    <navigationItem key="navigationItem" title="Radio Player" id="eb2-6m-5EE">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="Otf-Pp-Fez">
+                            <connections>
+                                <action selector="backToRadioList:" destination="f13-4G-jGP" id="qQG-Fk-BFE"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jvt-TT-QYF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5172" y="551"/>
+            <point key="canvasLocation" x="6048" y="431"/>
         </scene>
         <!--Radio List Table View Controller-->
         <scene sceneID="4Hs-u7-Wy5">
@@ -92,6 +98,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="S2d-XW-w8j">
+                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="S2d-XW-w8j" id="BOs-SS-CMg">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="SS0-v2-dd8">
+                                <rect key="frame" x="0.0" y="72" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SS0-v2-dd8" id="Fwl-S6-w6G">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="8c2-Iy-DCg">
+                                <rect key="frame" x="0.0" y="116" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8c2-Iy-DCg" id="m1Y-za-4Ap">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
                         <sections/>
                         <connections>
                             <outlet property="dataSource" destination="gjb-2l-AOR" id="qAW-AF-qmc"/>
@@ -105,7 +137,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BhQ-0U-iPB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4118.840579710145" y="551.11607142857144"/>
+            <point key="canvasLocation" x="4293" y="911"/>
         </scene>
         <!--Settings-->
         <scene sceneID="JHD-lT-T2d">
@@ -334,6 +366,7 @@
                     <nil name="viewControllers"/>
                     <connections>
                         <segue destination="gjb-2l-AOR" kind="relationship" relationship="rootViewController" id="wDS-L4-NAE"/>
+                        <segue destination="f13-4G-jGP" kind="show" id="kX3-V2-Oef"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e1o-GT-7OH" userLabel="First Responder" sceneMemberID="firstResponder"/>
