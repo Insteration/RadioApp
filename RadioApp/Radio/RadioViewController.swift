@@ -13,7 +13,10 @@ import AVFoundation
 class RadioViewController: UIViewController {
     
     
-    let player = AVPlayer(url: URL(string: "http://media.fregat.com:8000/RadioMIX.m3u")!)
+    let informatorFM = AVPlayer(url: URL(string: "http://media.fregat.com:8000/RadioMIX.m3u")!)
+    let kissFM = AVPlayer(url: URL(string: "https://www.kissfm.ua/KissFM.m3u")!)
+    let luxFM = AVPlayer(url: URL(string: "http://lux.fm/resources/file/music/lux.m3u")!)
+    
 //    let vcc = AVPlayerItem(asset: <#T##AVAsset#>)
     let vc = AVPlayerViewController()
 //    vc.player = player
@@ -28,7 +31,17 @@ class RadioViewController: UIViewController {
     
 
     @IBAction func playButton(_ sender: UIButton) {
-        player.play()
+        informatorFM.play()
+        
+        do {
+            try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default, options: [.mixWithOthers, .allowAirPlay])
+            print("Playback OK")
+            try AVAudioSession.sharedInstance().setActive(true)
+            print("Session is Active")
+        } catch {
+            print(error)
+        }
+        
 //        self.vc.player = player
 //
 //        present(vc, animated: true) {
@@ -39,7 +52,7 @@ class RadioViewController: UIViewController {
     
     
     @IBAction func stopButton(_ sender: UIButton) {
-        player.pause()
+        informatorFM.pause()
         
     }
     /*

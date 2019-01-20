@@ -47,35 +47,42 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0H3-Ye-qw7">
-                                <rect key="frame" x="94" y="730" width="86" height="48"/>
-                                <state key="normal" title="Stop" image="stop"/>
-                                <connections>
-                                    <action selector="stopButton:" destination="f13-4G-jGP" eventType="touchUpInside" id="qaq-tp-5cG"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Ek-ES-fkf">
-                                <rect key="frame" x="253" y="730" width="82" height="48"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Ek-ES-fkf">
+                                <rect key="frame" x="250" y="481" width="82" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Play" image="play"/>
                                 <connections>
                                     <action selector="playButton:" destination="f13-4G-jGP" eventType="touchUpInside" id="dWI-bR-JP9"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f20-Ga-5rT">
+                                <rect key="frame" x="82" y="159" width="250" height="250"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="596-g0-Dfn">
+                                <rect key="frame" x="290" y="423" width="42" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0H3-Ye-qw7">
+                                <rect key="frame" x="82" y="481" width="49" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Stop" image="stop"/>
+                                <connections>
+                                    <action selector="stopButton:" destination="f13-4G-jGP" eventType="touchUpInside" id="qaq-tp-5cG"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="4Ek-ES-fkf" firstAttribute="leading" secondItem="0H3-Ye-qw7" secondAttribute="trailing" constant="73" id="3dZ-nd-9nk"/>
-                            <constraint firstItem="4Ek-ES-fkf" firstAttribute="top" secondItem="wVI-Z1-Irg" secondAttribute="top" constant="642" id="XfA-hy-PvD"/>
-                            <constraint firstItem="4Ek-ES-fkf" firstAttribute="baseline" secondItem="0H3-Ye-qw7" secondAttribute="baseline" id="kYP-T6-SiJ"/>
-                            <constraint firstItem="wVI-Z1-Irg" firstAttribute="trailing" secondItem="4Ek-ES-fkf" secondAttribute="trailing" constant="79" id="qKw-Gv-cC8"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="wVI-Z1-Irg"/>
                     </view>
                     <navigationItem key="navigationItem" title="Radio" id="VGj-eg-uku"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jvt-TT-QYF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4922" y="552"/>
+            <point key="canvasLocation" x="4921.739130434783" y="551.11607142857144"/>
         </scene>
         <!--Radio List Table View Controller-->
         <scene sceneID="4Hs-u7-Wy5">
@@ -167,7 +174,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BhQ-0U-iPB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4118.840579710145" y="551.78571428571422"/>
+            <point key="canvasLocation" x="4118.840579710145" y="551.11607142857144"/>
         </scene>
         <!--Settings-->
         <scene sceneID="JHD-lT-T2d">
