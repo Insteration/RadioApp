@@ -99,6 +99,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="3xv-5D-Bu6"/>
+                    <connections>
+                        <outlet property="radioList" destination="BIF-8C-wcr" id="ma1-8w-KV4"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BhQ-0U-iPB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
