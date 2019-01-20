@@ -16,9 +16,9 @@ class HomeViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         if myModel.firstSwitchOnHSVC == true {
-            self.labelSettings.text = myModel.pidorEnable
+            self.labelSettings.text = myModel.preferenceEnable
         } else {
-            self.labelSettings.text = myModel.pidorDisable
+            self.labelSettings.text = myModel.preferenceDisable
         }
     }
 

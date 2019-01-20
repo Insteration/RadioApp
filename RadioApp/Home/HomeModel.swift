@@ -11,6 +11,6 @@ import Foundation
 class MyModel {
     var mydata = "Pidor"
     var firstSwitchOnHSVC = false
-    var pidorEnable = "Pidor Enable"
-    var pidorDisable = "Pidor Disable"
+    var preferenceEnable = "Preference Enable"
+    var preferenceDisable = "Preference Disable"
 }
