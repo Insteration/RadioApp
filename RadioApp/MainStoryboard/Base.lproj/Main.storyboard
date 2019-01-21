@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_5" orientation="portrait">
+    <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -25,11 +25,28 @@
                                     <segue destination="nxs-wS-btG" kind="show" id="LY0-jU-HX5"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Radio App" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sDM-Zv-rSV">
+                                <rect key="frame" x="20" y="193" width="374" height="58"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2019" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Y3-U3-HEs">
+                                <rect key="frame" x="188" y="856" width="38" height="20"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="bWG-hO-LhB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3j5-YC-OY8"/>
                             <constraint firstItem="bWG-hO-LhB" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="73k-32-rlG"/>
+                            <constraint firstItem="6Y3-U3-HEs" firstAttribute="centerX" secondItem="bWG-hO-LhB" secondAttribute="centerX" id="8am-Tl-uVq"/>
+                            <constraint firstItem="sDM-Zv-rSV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="149" id="HHe-iG-C6T"/>
+                            <constraint firstItem="sDM-Zv-rSV" firstAttribute="centerX" secondItem="bWG-hO-LhB" secondAttribute="centerX" id="K5A-he-2nL"/>
+                            <constraint firstItem="sDM-Zv-rSV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="dJc-6K-qcw"/>
+                            <constraint firstAttribute="bottom" secondItem="6Y3-U3-HEs" secondAttribute="bottom" constant="20" symbolic="YES" id="f9B-ah-Xsb"/>
                             <constraint firstItem="bWG-hO-LhB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="108" id="oYX-Dw-Vbp"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -37,7 +54,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-134.78260869565219" y="42.857142857142854"/>
+            <point key="canvasLocation" x="-135" y="42.25352112676056"/>
         </scene>
         <!--Radio Player-->
         <scene sceneID="IXc-tL-G6J">
@@ -54,21 +71,21 @@
                                 <rect key="frame" x="37" y="602" width="340" height="48"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5er-R0-o2z">
-                                        <rect key="frame" x="0.0" y="0.0" width="60.666666666666664" height="48"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="60.5" height="48"/>
                                         <state key="normal" image="pause"/>
                                         <connections>
                                             <action selector="pauseButton:" destination="f13-4G-jGP" eventType="touchUpInside" id="ttu-LE-Q1A"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Ek-ES-fkf">
-                                        <rect key="frame" x="139.66666666666666" y="0.0" width="60.666666666666657" height="48"/>
+                                        <rect key="frame" x="139.5" y="0.0" width="61" height="48"/>
                                         <state key="normal" image="play"/>
                                         <connections>
                                             <action selector="playButton:" destination="f13-4G-jGP" eventType="touchUpInside" id="dWI-bR-JP9"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0H3-Ye-qw7">
-                                        <rect key="frame" x="279.33333333333331" y="0.0" width="60.666666666666686" height="48"/>
+                                        <rect key="frame" x="279.5" y="0.0" width="60.5" height="48"/>
                                         <state key="normal" image="stop"/>
                                         <connections>
                                             <action selector="stopButton:" destination="f13-4G-jGP" eventType="touchUpInside" id="qaq-tp-5cG"/>
@@ -431,7 +448,7 @@
                                 <rect key="frame" x="16" y="64" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="h4G-UN-NkE" id="lO1-z6-MWX">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
