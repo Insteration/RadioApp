@@ -12,7 +12,6 @@ import AVFoundation
 
 
 protocol Radio {
-    var ukraineRadio: [String] {get set}
     func playRadio(_ nameRadioStation: AVPlayer)
     func stopRadio(_ nameRadioStation: AVPlayer)
 }
@@ -20,17 +19,13 @@ protocol Radio {
 
 class RadioModel: Radio {
     
-    internal var ukraineRadio = ["Informator FM", "Kiss FM", "Lux FM", "Hit FM", "Shanson FM"]
-     let informatorFM = AVPlayer(url: URL(string: "http://media.fregat.com:8000/RadioMIX.m3u")!)
-     let kissFM = AVPlayer(url: URL(string: "https://www.kissfm.ua/KissFM.m3u")!)
-     let luxFM = AVPlayer(url: URL(string: "http://lux.fm/resources/file/music/lux.m3u")!)
-     let hitFM = AVPlayer(url: URL(string: "https://www.hitfm.ua/HitFM.m3u")!)
-     let shansonFM = AVPlayer(url: URL(string: "http://media2.brg.ua:8000/shanson_h.m3u")!)
+    let ukraineRadio = ["Informator FM", "Kiss FM", "Lux FM", "Hit FM", "Shanson FM"]
+    let informatorFM = AVPlayer(url: URL(string: "http://media.fregat.com:8000/RadioMIX.m3u")!)
+    let kissFM = AVPlayer(url: URL(string: "https://www.kissfm.ua/KissFM.m3u")!)
+    let luxFM = AVPlayer(url: URL(string: "http://lux.fm/resources/file/music/lux.m3u")!)
+    let hitFM = AVPlayer(url: URL(string: "https://www.hitfm.ua/HitFM.m3u")!)
+    let shansonFM = AVPlayer(url: URL(string: "http://media2.brg.ua:8000/shanson_h.m3u")!)
     
-    
-    
-    
-    //     luxFM.play()
     private let playerVC = AVPlayerViewController()
     
     func playRadio(_ nameRadioStation: AVPlayer) {
@@ -44,8 +39,12 @@ class RadioModel: Radio {
 }
 
 class RadioMinorSettings {
+    
     var numberOfRadioStation = 0
 }
+
+
+
 //class parser {
 //
 //    if var path = Bundle.main.path(forResource: "tvhd", ofType: "m3u"), var content = try? String(contentsOfFile: path, encoding: NSUTF8StringEncoding) {

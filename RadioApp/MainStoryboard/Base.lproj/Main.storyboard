@@ -58,28 +58,28 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5er-R0-o2z">
-                                <rect key="frame" x="183" y="481" width="48" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="pause"/>
-                                <connections>
-                                    <action selector="pauseButton:" destination="f13-4G-jGP" eventType="touchUpInside" id="ttu-LE-Q1A"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Ek-ES-fkf">
-                                <rect key="frame" x="284" y="481" width="48" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Play" image="play"/>
-                                <connections>
-                                    <action selector="playButton:" destination="f13-4G-jGP" eventType="touchUpInside" id="dWI-bR-JP9"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0H3-Ye-qw7">
                                 <rect key="frame" x="82" y="481" width="48" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Stop" image="stop"/>
                                 <connections>
                                     <action selector="stopButton:" destination="f13-4G-jGP" eventType="touchUpInside" id="qaq-tp-5cG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Ek-ES-fkf">
+                                <rect key="frame" x="183" y="481" width="48" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Play" image="play"/>
+                                <connections>
+                                    <action selector="playButton:" destination="f13-4G-jGP" eventType="touchUpInside" id="dWI-bR-JP9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5er-R0-o2z">
+                                <rect key="frame" x="284" y="481" width="48" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="pause"/>
+                                <connections>
+                                    <action selector="pauseButton:" destination="f13-4G-jGP" eventType="touchUpInside" id="ttu-LE-Q1A"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -95,6 +95,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="radioNameNavigationItem" destination="eb2-6m-5EE" id="q7y-oj-P70"/>
+                        <outlet property="songNameLabel" destination="596-g0-Dfn" id="4Rb-pU-0fO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jvt-TT-QYF" userLabel="First Responder" sceneMemberID="firstResponder"/>

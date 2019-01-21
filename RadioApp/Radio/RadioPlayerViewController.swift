@@ -12,13 +12,8 @@ import AVFoundation
 
 class RadioPlayerViewController: UIViewController {
     
+    var radio = RadioModel()
     var radioMinorSettings: RadioMinorSettings?
-    let radio = RadioModel()
-    
-    //    let radio: Radio = radio
-    //    let playRadio: Radio = Radio.playRadio(<#T##Radio#>)
-    //    let stopRadio: Radio = Radio.stopRadio(<#T##Radio#>)
-    
     
     
     override func viewDidLoad() {
@@ -44,8 +39,10 @@ class RadioPlayerViewController: UIViewController {
     }
     
     @IBOutlet weak var radioNameNavigationItem: UINavigationItem!
+    @IBOutlet weak var songNameLabel: UILabel!
     
     @IBAction func backToRadioList(_ sender: UIBarButtonItem) {
+        
         dismiss(animated: true, completion: nil)
     }
     
@@ -66,9 +63,6 @@ class RadioPlayerViewController: UIViewController {
             ()
         }
         
-        //        radio.playRadio(radio.hitFM)
-        //        luxFM.play()
-        
         do {
             try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default, options: [.mixWithOthers, .allowAirPlay])
             print("Playback OK")
@@ -80,12 +74,26 @@ class RadioPlayerViewController: UIViewController {
         
     }
     @IBAction func pauseButton(_ sender: UIButton) {
+        
         print(radioMinorSettings?.numberOfRadioStation)
     }
     
-    
     @IBAction func stopButton(_ sender: UIButton) {
-        //        radio.stopRadio(radio.hitFM)
+        
+        switch radioMinorSettings?.numberOfRadioStation {
+        case 0:
+            radio.stopRadio(radio.informatorFM)
+        case 1:
+            radio.stopRadio(radio.kissFM)
+        case 2:
+            radio.stopRadio(radio.luxFM)
+        case 3:
+            radio.stopRadio(radio.hitFM)
+        case 4:
+            radio.stopRadio(radio.shansonFM)
+        default:
+            ()
+        }
         
     }
     /*
