@@ -15,25 +15,35 @@ class RadioPlayerViewController: UIViewController {
     var radioMinorSettings: RadioMinorSettings?
     let radio = RadioModel()
     
-//    let radio: Radio = radio
-//    let playRadio: Radio = Radio.playRadio(<#T##Radio#>)
-//    let stopRadio: Radio = Radio.stopRadio(<#T##Radio#>)
+    //    let radio: Radio = radio
+    //    let playRadio: Radio = Radio.playRadio(<#T##Radio#>)
+    //    let stopRadio: Radio = Radio.stopRadio(<#T##Radio#>)
     
-//    let informatorFM = AVPlayer(url: URL(string: "http://media.fregat.com:8000/RadioMIX.m3u")!)
-//    let kissFM = AVPlayer(url: URL(string: "https://www.kissfm.ua/KissFM.m3u")!)
-    let luxFM = AVPlayer(url: URL(string: "http://lux.fm/resources/file/music/lux.m3u")!)
     
-//    let vcc = AVPlayerItem(asset: <#T##AVAsset#>)
-//    let vc = AVPlayerViewController()
-//    vc.player = player
     
-
-
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        switch radioMinorSettings?.numberOfRadioStation {
+        case 0:
+            self.radioNameNavigationItem.title = radio.ukraineRadio[0]
+        case 1:
+            self.radioNameNavigationItem.title = radio.ukraineRadio[1]
+        case 2:
+            self.radioNameNavigationItem.title = radio.ukraineRadio[2]
+        case 3:
+            self.radioNameNavigationItem.title = radio.ukraineRadio[3]
+        case 4:
+            self.radioNameNavigationItem.title = radio.ukraineRadio[4]
+        default:
+            ()
+        }
+        
+        
         // Do any additional setup after loading the view.
     }
+    
+    @IBOutlet weak var radioNameNavigationItem: UINavigationItem!
     
     @IBAction func backToRadioList(_ sender: UIBarButtonItem) {
         dismiss(animated: true, completion: nil)
@@ -41,8 +51,23 @@ class RadioPlayerViewController: UIViewController {
     
     @IBAction func playButton(_ sender: UIButton) {
         
-//        radio.playRadio(radio.hitFM)
-//        luxFM.play()
+        switch radioMinorSettings?.numberOfRadioStation {
+        case 0:
+            radio.playRadio(radio.informatorFM)
+        case 1:
+            radio.playRadio(radio.kissFM)
+        case 2:
+            radio.playRadio(radio.luxFM)
+        case 3:
+            radio.playRadio(radio.hitFM)
+        case 4:
+            radio.playRadio(radio.shansonFM)
+        default:
+            ()
+        }
+        
+        //        radio.playRadio(radio.hitFM)
+        //        luxFM.play()
         
         do {
             try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default, options: [.mixWithOthers, .allowAirPlay])
@@ -52,7 +77,7 @@ class RadioPlayerViewController: UIViewController {
         } catch {
             print(error)
         }
-
+        
     }
     @IBAction func pauseButton(_ sender: UIButton) {
         print(radioMinorSettings?.numberOfRadioStation)
@@ -60,17 +85,17 @@ class RadioPlayerViewController: UIViewController {
     
     
     @IBAction func stopButton(_ sender: UIButton) {
-//        radio.stopRadio(radio.hitFM)
+        //        radio.stopRadio(radio.hitFM)
         
     }
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
