@@ -10,8 +10,10 @@ import UIKit
 
 class RadioListTableViewController: UITableViewController {
     
-    let radio = RadioModel()
+    var radio = RadioModel()
     let radioMinorSettings = RadioMinorSettings()
+    
+
     
     let cellReuseIdentifier = "cell"
     
@@ -58,13 +60,13 @@ class RadioListTableViewController: UITableViewController {
         print("You tapped cell number \(indexPath.row).")
     }
     
-//    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-//        return "Radio list"
-//    }
-    
-    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let vw = UIView()
-        vw.backgroundColor = UIColor.white
-        return vw
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "Radio list"
     }
+    
+//    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+//        let vw = UIView()
+//        vw.backgroundColor = UIColor.white
+//        return vw
+//    }
 }

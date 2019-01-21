@@ -47,6 +47,9 @@ class RadioPlayerViewController: UIViewController {
     @IBOutlet weak var songNameLabel: UILabel!
     
     @IBAction func backToRadioList(_ sender: UIBarButtonItem) {
+        let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let radioListTableController = storyboard.instantiateViewController(withIdentifier: "radioListTVC") as! RadioListTableViewController
+        radioListTableController.radio = radio
         
         dismiss(animated: true, completion: nil)
     }
@@ -86,15 +89,15 @@ class RadioPlayerViewController: UIViewController {
         
         switch radioMinorSettings?.numberOfRadioStation {
         case 0:
-            radio.stopRadio(radio.informatorFM)
+            radio.stopRadio(radio.ukraineRadioPoolAddresses[0])
         case 1:
-            radio.stopRadio(radio.kissFM)
+            radio.stopRadio(radio.ukraineRadioPoolAddresses[1])
         case 2:
-            radio.stopRadio(radio.luxFM)
+            radio.stopRadio(radio.ukraineRadioPoolAddresses[2])
         case 3:
-            radio.stopRadio(radio.hitFM)
+            radio.stopRadio(radio.ukraineRadioPoolAddresses[3])
         case 4:
-            radio.stopRadio(radio.shansonFM)
+            radio.stopRadio(radio.ukraineRadioPoolAddresses[4])
         default:
             ()
         }
@@ -109,5 +112,4 @@ class RadioPlayerViewController: UIViewController {
      // Pass the selected object to the new view controller.
      }
      */
-    
 }

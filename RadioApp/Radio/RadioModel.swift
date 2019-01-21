@@ -16,8 +16,6 @@ class RadioModel {
     let testString = "https://www.kissfm.ua/KissFM.m3u"
     let ukraineRadio = ["Informator FM", "Kiss FM", "Lux FM", "Hit FM", "Shanson FM"]
     
-//    guard let url = URL(string: "http://media.fregat.com:8000/RadioMIX.m3u") else {return}
-    
     let ukraineRadioPoolAddresses = [AVPlayer(url: URL(string: "http://media.fregat.com:8000/RadioMIX.m3u")!), AVPlayer(url: URL(string: "https://www.kissfm.ua/KissFM.m3u")!), AVPlayer(url: URL(string: "http://lux.fm/resources/file/music/lux.m3u")!), AVPlayer(url: URL(string: "https://www.hitfm.ua/HitFM.m3u")!), AVPlayer(url: URL(string: "http://media2.brg.ua:8000/shanson_h.m3u")!)]
     
     let informatorFM = AVPlayer(url: URL(string: "http://media.fregat.com:8000/RadioMIX.m3u")!)
