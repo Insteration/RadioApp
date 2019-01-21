@@ -11,13 +11,7 @@ import AVKit
 import AVFoundation
 
 
-protocol Radio {
-    func playRadio(_ nameRadioStation: AVPlayer)
-    func stopRadio(_ nameRadioStation: AVPlayer)
-}
-
-
-class RadioModel: Radio {
+class RadioModel {
     
     let testString = "https://www.kissfm.ua/KissFM.m3u"
     let ukraineRadio = ["Informator FM", "Kiss FM", "Lux FM", "Hit FM", "Shanson FM"]
@@ -40,7 +34,6 @@ class RadioModel: Radio {
 }
 
 class RadioMinorSettings {
-    
     var numberOfRadioStation = 0
 }
 
@@ -68,13 +61,12 @@ struct MediaItem {
             }
         })
         
-        
         return mediaItems
     }
     
-}
-
-//if let path = NSBundle.mainBundle().pathForResource("playlist", ofType: "m3u"),
+    
+//    let path = Bundle.main.path(forResource: "playlist", ofType: "m3u"),
 //    contentsOfFile = try? String(contentsOfFile: path, encoding: NSUTF8StringEncoding) {
-//    MediaItem.parseM3U(contentsOfFile)
-//}
+//        MediaItem.parseM3U(contentsOfFile)
+//    }
+}
