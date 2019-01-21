@@ -12,15 +12,19 @@ import AVFoundation
 
 class RadioPlayerViewController: UIViewController {
     
-//    let radio = Radio()
+    var radioMinorSettings: RadioMinorSettings?
+    let radio = RadioModel()
     
+//    let radio: Radio = radio
+//    let playRadio: Radio = Radio.playRadio(<#T##Radio#>)
+//    let stopRadio: Radio = Radio.stopRadio(<#T##Radio#>)
     
-    let informatorFM = AVPlayer(url: URL(string: "http://media.fregat.com:8000/RadioMIX.m3u")!)
-    let kissFM = AVPlayer(url: URL(string: "https://www.kissfm.ua/KissFM.m3u")!)
+//    let informatorFM = AVPlayer(url: URL(string: "http://media.fregat.com:8000/RadioMIX.m3u")!)
+//    let kissFM = AVPlayer(url: URL(string: "https://www.kissfm.ua/KissFM.m3u")!)
     let luxFM = AVPlayer(url: URL(string: "http://lux.fm/resources/file/music/lux.m3u")!)
     
 //    let vcc = AVPlayerItem(asset: <#T##AVAsset#>)
-    let vc = AVPlayerViewController()
+//    let vc = AVPlayerViewController()
 //    vc.player = player
     
 
@@ -36,7 +40,9 @@ class RadioPlayerViewController: UIViewController {
     }
     
     @IBAction func playButton(_ sender: UIButton) {
-        informatorFM.play()
+        
+//        radio.playRadio(radio.hitFM)
+//        luxFM.play()
         
         do {
             try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default, options: [.mixWithOthers, .allowAirPlay])
@@ -46,18 +52,15 @@ class RadioPlayerViewController: UIViewController {
         } catch {
             print(error)
         }
-        
-//        self.vc.player = player
-//
-//        present(vc, animated: true) {
-//            self.vc.player?.play()
-//        }
-        
+
+    }
+    @IBAction func pauseButton(_ sender: UIButton) {
+        print(radioMinorSettings?.numberOfRadioStation)
     }
     
     
     @IBAction func stopButton(_ sender: UIButton) {
-        informatorFM.pause()
+//        radio.stopRadio(radio.hitFM)
         
     }
     /*

@@ -10,12 +10,15 @@ import UIKit
 
 class RadioListTableViewController: UITableViewController {
     
-    let radio = Radio()
+    let radio = RadioModel()
+    let radioMinorSettings = RadioMinorSettings()
+    
     let cellReuseIdentifier = "cell"
     
     func teleportToRadioPlayer() {
         let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let radioPlayerViewController = storyboard.instantiateViewController(withIdentifier: "radioPlayerViewController") as! RadioPlayerViewController
+        radioPlayerViewController.radioMinorSettings = radioMinorSettings
         let radioPlayerNavController = UINavigationController(rootViewController: radioPlayerViewController)
         present(radioPlayerNavController, animated: true, completion: nil)
     }
@@ -56,7 +59,7 @@ class RadioListTableViewController: UITableViewController {
     
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        radioMinorSettings.numberOfRadioStation = indexPath.row
         teleportToRadioPlayer()
         print("You tapped cell number \(indexPath.row).")
     }

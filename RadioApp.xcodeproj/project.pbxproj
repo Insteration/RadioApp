@@ -65,9 +65,9 @@
 		D93AD56521F31B1A00EDAB54 /* Radio */ = {
 			isa = PBXGroup;
 			children = (
+				D93AD56821F31D2E00EDAB54 /* RadioModel.swift */,
 				D996315B21F1EFEB008B4AEE /* RadioPlayerViewController.swift */,
 				D93AD56621F31B5000EDAB54 /* RadioListTableViewController.swift */,
-				D93AD56821F31D2E00EDAB54 /* RadioModel.swift */,
 			);
 			path = Radio;
 			sourceTree = "<group>";
@@ -75,8 +75,8 @@
 		D996316421F1FF7F008B4AEE /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				D996315921F1EED6008B4AEE /* HomeViewController.swift */,
 				D996316121F1FF67008B4AEE /* HomeModel.swift */,
+				D996315921F1EED6008B4AEE /* HomeViewController.swift */,
 				D996315F21F1FF2F008B4AEE /* HomeSettingsViewController.swift */,
 				D9C8745421F25D4B006067A3 /* HomeSettingsSecondViewController.swift */,
 				D996316621F21AB3008B4AEE /* HomeCreativeViewController.swift */,
