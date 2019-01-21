@@ -79,7 +79,7 @@ class RadioPlayerViewController: UIViewController {
         
     }
     @IBAction func pauseButton(_ sender: UIButton) {
-        print(radioMinorSettings?.numberOfRadioStation)
+        print(radioMinorSettings?.numberOfRadioStation as Any)
     }
     
     @IBAction func stopButton(_ sender: UIButton) {

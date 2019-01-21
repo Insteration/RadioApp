@@ -38,6 +38,11 @@ class RadioModel {
 
 class RadioMinorSettings {
     var numberOfRadioStation = 0
+    
+    func getM3U() -> String {
+        
+        return ""
+    }
 }
 
 

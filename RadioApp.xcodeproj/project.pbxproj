@@ -70,7 +70,6 @@
 			isa = PBXGroup;
 			children = (
 				D99AE64A21F1D3A100D933B5 /* LoginViewController.swift */,
-				D99AE65A21F1D94700D933B5 /* TabBarViewController.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -124,6 +123,7 @@
 		D99AE64721F1D3A100D933B5 /* RadioApp */ = {
 			isa = PBXGroup;
 			children = (
+				D99AE65A21F1D94700D933B5 /* TabBarViewController.swift */,
 				D99AE64821F1D3A100D933B5 /* AppDelegate.swift */,
 				D93AD56421F3190100EDAB54 /* Login */,
 				D996316421F1FF7F008B4AEE /* Home */,
