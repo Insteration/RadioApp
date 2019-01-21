@@ -19,6 +19,7 @@ protocol Radio {
 
 class RadioModel: Radio {
     
+    let testString = "https://www.kissfm.ua/KissFM.m3u"
     let ukraineRadio = ["Informator FM", "Kiss FM", "Lux FM", "Hit FM", "Shanson FM"]
     let informatorFM = AVPlayer(url: URL(string: "http://media.fregat.com:8000/RadioMIX.m3u")!)
     let kissFM = AVPlayer(url: URL(string: "https://www.kissfm.ua/KissFM.m3u")!)
@@ -45,29 +46,35 @@ class RadioMinorSettings {
 
 
 
-//class parser {
-//
-//    if var path = Bundle.main.path(forResource: "tvhd", ofType: "m3u"), var content = try? String(contentsOfFile: path, encoding: NSUTF8StringEncoding) {
-//        let lines = content.componentsSeparatedByCharactersInSet(.newlineCharacterSet())
-//        
-//        var streams = [String: NSURL]()
-//        var streamName: String?
-//        for line in lines {
-//            if line.containsString("#") {
-//                if let match = line.rangeOfString("^#EXTINF:-1,", options: .RegularExpressionSearch) {
-//                    streamName = line.substringWithRange(Range<String.Index>(start: match.endIndex, end: line.endIndex))
-//                }
-//            } else if !line.isEmpty {
-//                if
-//                    let _streamName = streamName,
-//                    let url = NSURL(string: line)
-//                {
-//                    streams[_streamName] = url
-//                }
-//            }
-//        }
-//        return streams
-//    } else {
-//    return nil
-//    }
+struct MediaItem {
+    var duration: Int?
+    var title: String?
+    var urlString: String?
+    
+    func parseM3U(contentsOfFile: String) -> [MediaItem]? {
+        var mediaItems = [MediaItem]()
+        contentsOfFile.enumerateLines (invoking: { line, stop in if line.hasPrefix("#EXTINF:") {
+            let infoLine = line.replacingOccurrences(of: "#EXTINF:", with: "")
+            let infos = Array(infoLine.components(separatedBy: ","))
+            if let durationString = infos.first, let duration = Int(durationString) {
+                let mediaItem   = MediaItem(duration: duration, title: infos.last, urlString: nil)
+                mediaItems.append(mediaItem)
+            }
+        } else {
+            if mediaItems.count > 0 {
+                var item = mediaItems.last
+                item?.urlString = line
+            }
+            }
+        })
+        
+        
+        return mediaItems
+    }
+    
+}
+
+//if let path = NSBundle.mainBundle().pathForResource("playlist", ofType: "m3u"),
+//    contentsOfFile = try? String(contentsOfFile: path, encoding: NSUTF8StringEncoding) {
+//    MediaItem.parseM3U(contentsOfFile)
 //}

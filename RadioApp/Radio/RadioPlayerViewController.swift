@@ -14,6 +14,7 @@ class RadioPlayerViewController: UIViewController {
     
     var radio = RadioModel()
     var radioMinorSettings: RadioMinorSettings?
+    var mediaItems = MediaItem()
     
     
     override func viewDidLoad() {
@@ -47,6 +48,7 @@ class RadioPlayerViewController: UIViewController {
     }
     
     @IBAction func playButton(_ sender: UIButton) {
+        print(mediaItems.parseM3U(contentsOfFile: radio.testString)!)
         
         switch radioMinorSettings?.numberOfRadioStation {
         case 0:
