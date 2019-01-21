@@ -9,12 +9,16 @@
 import UIKit
 import AVKit
 import AVFoundation
+import MediaPlayer
 
 class RadioPlayerViewController: UIViewController {
     
     var radio = RadioModel()
     var radioMinorSettings: RadioMinorSettings?
     var mediaItems = MediaItem()
+    
+    
+    let playerVC = AVPlayerViewController()
     
     
     override func viewDidLoad() {
@@ -52,7 +56,9 @@ class RadioPlayerViewController: UIViewController {
         
         switch radioMinorSettings?.numberOfRadioStation {
         case 0:
-            radio.playRadio(radio.informatorFM)
+            radio.playRadio(radio.ukraineRadioPoolAddresses[0])
+//            radio.playRadio(radio.informatorFM)
+            playerVC.updatesNowPlayingInfoCenter = true
         case 1:
             radio.playRadio(radio.kissFM)
         case 2:

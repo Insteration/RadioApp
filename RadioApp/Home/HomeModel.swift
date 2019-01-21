@@ -9,7 +9,7 @@
 import Foundation
 
 class MyModel {
-    var mydata = "Pidor"
+    var mydata = "First data"
     var firstSwitchOnHSVC = false
     var preferenceEnable = "Preference Enable"
     var preferenceDisable = "Preference Disable"
