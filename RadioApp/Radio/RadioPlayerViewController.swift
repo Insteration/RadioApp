@@ -52,7 +52,6 @@ class RadioPlayerViewController: UIViewController {
     }
     
     @IBAction func playButton(_ sender: UIButton) {
-        print(mediaItems.parseM3U(contentsOfFile: radio.testString)!)
         playerVC.updatesNowPlayingInfoCenter = true
         switch radioMinorSettings?.numberOfRadioStation {
         case 0:
