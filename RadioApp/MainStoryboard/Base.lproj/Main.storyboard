@@ -132,7 +132,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jvt-TT-QYF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4317.6000000000004" y="389.95502248875567"/>
+            <point key="canvasLocation" x="4246" y="552"/>
         </scene>
         <!--Radio List Table View Controller-->
         <scene sceneID="4Hs-u7-Wy5">
@@ -181,7 +181,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BhQ-0U-iPB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4319" y="1080"/>
+            <point key="canvasLocation" x="3265" y="1394"/>
         </scene>
         <!--Settings-->
         <scene sceneID="JHD-lT-T2d">
@@ -197,7 +197,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YPo-TE-opT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2480.8000000000002" y="-1075.4122938530736"/>
+            <point key="canvasLocation" x="2535" y="-1504"/>
         </scene>
         <!--Home-->
         <scene sceneID="mcG-WV-pa4">
@@ -334,10 +334,10 @@
             </objects>
             <point key="canvasLocation" x="4922" y="-395"/>
         </scene>
-        <!--More pidors on screen-->
+        <!--More Settings Controller-->
         <scene sceneID="aZg-Ob-QzX">
             <objects>
-                <viewController storyboardIdentifier="settingssecondhomevc" id="pgb-4w-PpK" customClass="HomeSettingsSecondViewController" customModule="RadioApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="settingssecondhomevc" id="pgb-4w-PpK" userLabel="More Settings Controller" customClass="HomeSettingsSecondViewController" customModule="RadioApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dCI-gn-D4H">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -434,7 +434,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bJg-IM-Thx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1541.5999999999999" y="-1075.4122938530736"/>
+            <point key="canvasLocation" x="1801" y="-1504"/>
         </scene>
         <!--Creative-->
         <scene sceneID="fd6-Z4-LMn">

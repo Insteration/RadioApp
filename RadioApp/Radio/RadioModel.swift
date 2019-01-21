@@ -18,12 +18,6 @@ class RadioModel {
     
     let ukraineRadioPoolAddresses = [AVPlayer(url: URL(string: "http://media.fregat.com:8000/RadioMIX.m3u")!), AVPlayer(url: URL(string: "https://www.kissfm.ua/KissFM.m3u")!), AVPlayer(url: URL(string: "http://lux.fm/resources/file/music/lux.m3u")!), AVPlayer(url: URL(string: "https://www.hitfm.ua/HitFM.m3u")!), AVPlayer(url: URL(string: "http://media2.brg.ua:8000/shanson_h.m3u")!)]
     
-    let informatorFM = AVPlayer(url: URL(string: "http://media.fregat.com:8000/RadioMIX.m3u")!)
-    let kissFM = AVPlayer(url: URL(string: "https://www.kissfm.ua/KissFM.m3u")!)
-    let luxFM = AVPlayer(url: URL(string: "http://lux.fm/resources/file/music/lux.m3u")!)
-    let hitFM = AVPlayer(url: URL(string: "https://www.hitfm.ua/HitFM.m3u")!)
-    let shansonFM = AVPlayer(url: URL(string: "http://media2.brg.ua:8000/shanson_h.m3u")!)
-        
     func playRadio(_ nameRadioStation: AVPlayer) {
         nameRadioStation.play()
     }
