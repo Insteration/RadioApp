@@ -53,20 +53,18 @@ class RadioPlayerViewController: UIViewController {
     
     @IBAction func playButton(_ sender: UIButton) {
         print(mediaItems.parseM3U(contentsOfFile: radio.testString)!)
-        
+        playerVC.updatesNowPlayingInfoCenter = true
         switch radioMinorSettings?.numberOfRadioStation {
         case 0:
             radio.playRadio(radio.ukraineRadioPoolAddresses[0])
-//            radio.playRadio(radio.informatorFM)
-            playerVC.updatesNowPlayingInfoCenter = true
         case 1:
-            radio.playRadio(radio.kissFM)
+            radio.playRadio(radio.ukraineRadioPoolAddresses[1])
         case 2:
-            radio.playRadio(radio.luxFM)
+            radio.playRadio(radio.ukraineRadioPoolAddresses[2])
         case 3:
-            radio.playRadio(radio.hitFM)
+            radio.playRadio(radio.ukraineRadioPoolAddresses[3])
         case 4:
-            radio.playRadio(radio.shansonFM)
+            radio.playRadio(radio.ukraineRadioPoolAddresses[4])
         default:
             ()
         }
@@ -82,7 +80,6 @@ class RadioPlayerViewController: UIViewController {
         
     }
     @IBAction func pauseButton(_ sender: UIButton) {
-        
         print(radioMinorSettings?.numberOfRadioStation)
     }
     
